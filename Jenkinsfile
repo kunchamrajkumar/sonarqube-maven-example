@@ -9,5 +9,14 @@ node {
         withMaven(globalMavenSettingsConfig: '', jdk: 'java', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
     sh 'mvn clean package'
            }
-   
+  stage('sonar.scan'){
+
+
+    withSonarQubeEnv(credentialsId: 'SonarsecretID') {
+    // some block
+      sh 'mvn sonar:sonar ' 
+  
+}
+  }
+     
    }
