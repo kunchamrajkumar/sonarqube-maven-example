@@ -15,7 +15,9 @@ node {
 
     withSonarQubeEnv(credentialsId: 'SonarsecretID') {
     // some block
-      sh 'mvn sonar:sonar ' 
+      sh " mvn sonar:sonar \
+  -Dsonar.host.url=http://54.163.127.180:9000 \
+  -Dsonar.login=3f3c359d7550689ccbe32c57df94a1ab16397d63 " 
   
 }
   }
