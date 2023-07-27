@@ -10,7 +10,16 @@ node {
     sh 'mvn deploy'
            }
    }
-  stage('sonar.scan'){
+   stage {   
+     withSonarQubeEnv(credentialsId: 'sonar_newID') {
+    sh " mvn sonar:sonar"
+}
+
+  
+  }
+
+  
+  /*stage('sonar.scan'){
 
 withMaven(globalMavenSettingsConfig: '', jdk: 'java', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
    
@@ -20,6 +29,6 @@ withMaven(globalMavenSettingsConfig: '', jdk: 'java', maven: 'maven', mavenSetti
   -Dsonar.login=56e5ad0a695eda6b8d8135b4488e048bb5bde3d4 " 
 }
 
-  }
+  }*/
      
    }
