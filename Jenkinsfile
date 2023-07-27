@@ -1,7 +1,7 @@
 node {
 
   stage ('checkout'){
-           git branch: 'master', credentialsId: 'git_creds', url: 'https://github.com/kunchamrajkumar/tomcat-root-war.git'
+           git branch: 'master', credentialsId: 'git_creds', url: 'https://github.com/kunchamrajkumar/sonarqube-maven-example.git'
  
          }
 
