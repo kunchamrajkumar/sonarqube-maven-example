@@ -15,8 +15,9 @@ node {
 withMaven(globalMavenSettingsConfig: '', jdk: 'java', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
    
       sh " mvn sonar:sonar \
-  -Dsonar.host.url=http://54.163.127.180:9000 \
-  -Dsonar.login=3f3c359d7550689ccbe32c57df94a1ab16397d63 " 
+  -Dsonar.projectKey=tomcat_sample \
+  -Dsonar.host.url=http://54.157.227.139:9000 \
+  -Dsonar.login=56e5ad0a695eda6b8d8135b4488e048bb5bde3d4 " 
 }
 
   }
