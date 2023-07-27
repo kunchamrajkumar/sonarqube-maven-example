@@ -11,9 +11,11 @@ node {
            }
    }
    stage {   
-     withSonarQubeEnv(credentialsId: 'sonar_newID') {
+     withMaven(globalMavenSettingsConfig: '', jdk: 'java', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
+            withSonarQubeEnv(credentialsId: 'sonar_newID') {
     sh " mvn sonar:sonar"
 }
+     }
 
   
   }
