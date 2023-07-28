@@ -10,7 +10,7 @@ node {
     sh 'mvn package'
            }
    }
-   stage {   
+  /* stage ('sonar scan') {   
      withMaven(globalMavenSettingsConfig: '', jdk: 'java', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
             withSonarQubeEnv(credentialsId: 'sonar_newID') {
     sh " mvn sonar:sonar"
@@ -18,7 +18,7 @@ node {
      }
 
   
-  }
+  }*/
 
   
   /*stage('sonar.scan'){
