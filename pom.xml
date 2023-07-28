@@ -90,16 +90,16 @@
         </profile>
     </profiles>
        <distributionManagement>
-           <snapshotRepository>
-              <id>snapshots</id>
-              <name>ip-172-31-92-74-snapshots</name>
-              <url>http://3.82.92.96:8081/artifactory/libs-snapshot-local</url>
-          </snapshotRepository>
+      <snapshotRepository>
+        <id>snapshots</id>
+        <name>ip-172-31-92-74-snapshots</name>
+        <url>http://34.201.77.128:8081/artifactory/libs-snapshot-local</url>
+       </snapshotRepository>
            <repository>
-              <id>central</id>
-              <name>ip-172-31-92-74-releases</name>
-              <url>http://3.82.92.96:8081/artifactory/libs-release-local</url>
-          </repository>
+        <id>central</id>
+        <name>ip-172-31-92-74-releases</name>
+        <url>http://34.201.77.128:8081/artifactory/libs-release-local</url>
+       </repository>
        </distributionManagement>
 
 </project>
